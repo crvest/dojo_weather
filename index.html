@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="container flexrow">
+            <h1>DojoWeather</h1>
+            <div class="flexrow gapchild">
+                <!-- sends alert on click -->
+                <h3 onmousedown="cityAlert()">Burbank</h3>
+                <h3 onmousedown="cityAlert()">Chicago</h3>
+                <h3 onmousedown="cityAlert()">Dallas</h3>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="flexcolumn">
+            <!-- current city and F/C -->
+            <div class="topbar container flexrow">
+                <h2>San Jose</h2>
+                <div class="tempmenu flexrow gapchild">
+                    <h4>show temperature in</h4>
+                    <select name="temp" id="temp">
+                        <option value="celsius">°C</option>
+                        <option value="fahrenheit">°F</option>
+                    </select>
+                </div>
+            </div>
+            <!-- black bar -->
+            <div class="blackbar"></div>
+            <!-- forecast container -->
+            <div class="container flexrow gapchild">
+                <!-- today's forecast -->
+                <div class="forecast flexcolumn">
+                    <h2>Today</h2>
+                    <img src="./assets/some_rain.png" alt="some rain">
+                    <p>some rain</p>
+                    <div class="flexrow gapchild">
+                        <h4 class="high">24°</h4>
+                        <h4 class="low">18°</h4>
+                    </div>
+                </div>
+                <!-- tomorrow's forecast -->
+                <div class="forecast flexcolumn">
+                    <h2>Tomorrow</h2>
+                    <img src="./assets/some_sun.png" alt="some sun">
+                    <p>some sun</p>
+                    <div class="flexrow gapchild">
+                        <h4 class="high">27°</h4>
+                        <h4 class="low">19°</h4>
+                    </div>
+                </div>
+                <!-- friday's forecast -->
+                <div class="forecast flexcolumn">
+                    <h2>Friday</h2>
+                    <img src="./assets/some_clouds.png" alt="some clouds">
+                    <p>some clouds</p>
+                    <div class="flexrow gapchild">
+                        <h4 class="high">21°</h4>
+                        <h4 class="low">16°</h4>
+                    </div>
+                </div>
+                <!-- saturdays's forecast -->
+                <div class="forecast flexcolumn">
+                    <h2>Saturday</h2>
+                    <img src="./assets/some_sun.png" alt="some sun">
+                    <p>some sun</p>
+                    <div class="flexrow gapchild">
+                        <h4 class="high">26°</h4>
+                        <h4 class="low">21°</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- cookie window -->
+            <div id="cookiewindow" class="cookie flexrow container">
+                <img src="./assets/cookie.png" alt="cookie">
+                <div class="cookietext flexcolumnstart">
+                    <h4>Stop! Cookie time</h4>
+                    <p id="cookiewarning">We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="">Read More...</a></p>
+                </div>
+                <!-- removes cookie window on click -->
+                <button id="remove" type="button" onclick="removeCookie(cookiewindow)">I Accept</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+
+<script src="./script.js"></script>
+</html>
